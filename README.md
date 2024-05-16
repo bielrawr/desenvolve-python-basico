@@ -1,1 +1,3 @@
-# desenvolve-python-basico
+# PROJETO DESENVOLVE - ITABIRA
+# Programação básica com Python
+# PDITA131
