@@ -1,21 +1,25 @@
+# Gerar uma lista com 20 elementos entre -10 e 10
 import random
 lista = [random.randint(-10, 10) for _ in range(20)]
-
 print("Original:", lista)
 
-max_negativos = 0
-best_interval = (0, 0)
+# Encontrar o maior intervalo consecutivo com números negativos
+max_inicial, max_final, max_tamanho = 0, 0, 0
+inicial = 0
 
-for i in range(len(lista)):
-    for j in range(i + 1, len(lista) + 1):
-        sub_lista = lista[i:j]
-        count_negativos = sum(1 for x in sub_lista if x < 0)
-        if count_negativos > max_negativos:
-            max_negativos = count_negativos
-            best_interval = (i, j)
+while inicial < len(lista):
+    if lista[inicial] < 0:
+        final = inicial
+        while final < len(lista) and lista[final] < 0:
+            final += 1
+        tamanho = final - inicial
+        if tamanho > max_tamanho:
+            max_inicial, max_final, max_tamanho = inicial, final, tamanho
+        inicial = final
+    else:
+        inicial += 1
 
-# Deleta o intervalo com mais números negativos
-del lista[best_interval[0]:best_interval[1]]
+# Deletar o maior intervalo consecutivo de números negativos
+del lista[max_inicial:max_final]
 
-# Imprimir lista editada
 print("Editada:", lista)
