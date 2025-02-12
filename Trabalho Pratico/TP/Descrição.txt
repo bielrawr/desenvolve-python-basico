@@ -1,0 +1,35 @@
+Introdução
+Empresa: TechStock Solutions
+
+A TechStock Solutions é uma empresa fictícia especializada em controle de estoque e gerenciamento de produtos. Seu sistema permite cadastrar usuários e itens, oferecendo diferentes níveis de acesso para administradores e funcionários. A empresa trabalha com uma variedade de produtos eletrônicos, como notebooks, celulares e acessórios.
+
+Estrutura do Sistema
+Usuários
+O sistema possui dois tipos de usuários:
+
+Administrador: Acesso total para gerenciar usuários e produtos.
+Funcionário: Pode visualizar e adicionar produtos, mas não pode excluir usuários.
+Os dados dos usuários são armazenados em um arquivo chamado usuarios.csv, onde cada linha contém o nome de usuário, a senha e o nível de acesso.
+
+Produtos
+Os produtos cadastrados incluem dispositivos eletrônicos e acessórios. Eles são armazenados no arquivo produtos.csv, contendo informações como código, nome, preço e quantidade.
+
+Funcionalidades
+O sistema segue a estrutura CRUD, permitindo:
+
+Usuários
+✅ Adicionar novos usuários
+✅ Listar todos os usuários cadastrados
+✅ Editar informações de um usuário
+✅ Excluir um usuário do sistema
+
+Produtos
+✅ Adicionar novos produtos ao estoque
+✅ Listar todos os produtos cadastrados
+✅ Atualizar informações de um produto
+✅ Excluir um produto do sistema
+✅ Buscar produtos pelo nome ou código
+✅ Ordenar produtos por nome ou preço
+
+Conclusão
+O sistema da TechStock Solutions oferece um controle eficiente de usuários e produtos. Durante o desenvolvimento, alguns desafios foram enfrentados, como a organização dos arquivos de dados e a criação de um menu intuitivo. Com melhorias futuras, o sistema poderá incluir uma interface gráfica para facilitar ainda mais o uso.
